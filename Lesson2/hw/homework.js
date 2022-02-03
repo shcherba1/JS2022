@@ -54,38 +54,51 @@
 // 5. Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.
 //
 
-// let day = prompt('enter day');
+// let day = +prompt('enter day');
 // switch (day) {
-//     case '1':
+//     case 1:
 //         console.log('sleep');
 //         break;
-//     case '2':
+//     case 2:
 //         console.log('work')
 //         break;
-//     case '3':
+//     case 3:
 //         console.log('walk')
 //         break;
-//     case '4':
+//     case 4:
 //         console.log('sport')
 //         break;
-//     case '5':
+//     case 5:
 //         console.log('meeting')
 //         break;
-//     case '6':
+//     case 6:
 //         console.log('rest')
 //         break;
-//     case '7':
+//     case 7:
 //         console.log('nothing')
 //         break;
 //     default:
 //         console.log('wrong infa')
-//
 // }
 
 
 // 6. Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.
 //
 
+// let r = +prompt();
+// if (r % 4 === 0) {
+//     console.log('високосний рік');
+// } else {
+//     console.log('невисокосний рік');
+// }
+
 
 // 7. Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
 // Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
+
+// let j = prompt('Яка офіційна назва JavaScript?');
+// if (j === 'ECMAScript') {
+//     console.log('Правильно!');
+// } else {
+//     console.log('Не знаєте? ECMAScript!')
+// }
