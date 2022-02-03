@@ -105,38 +105,38 @@ console.log(typeof c);
 // 123 ? '123' -> false
 // 123 ? '123' -> true
 
-let t1 = 5 < 6
-console.log(t1)
-
-let t2 = 5 > 6
-console.log(t2)
-
-let t3 = 5 >= 6
-console.log(t3)
-
-let t4 = 5 === 6
-console.log(t4)
-
-let t5 = 10 === 10
-console.log(t5)
-
-let t6 = 10 == 10
-console.log(t6)
-
-let t7 = 10 > 10
-console.log(t7)
-
-let t8 = 10 < 10
-console.log(t8)
-
-let t9 = 10 !== 10
-console.log(t9)
-
-let t10 = 123 === '123'
-console.log(t10)
-
-let t11 = 123 !== '123'
-console.log(t11)
+// let t1 = 5 < 6
+// console.log(t1)
+//
+// let t2 = 5 > 6
+// console.log(t2)
+//
+// let t3 = 5 >= 6
+// console.log(t3)
+//
+// let t4 = 5 === 6
+// console.log(t4)
+//
+// let t5 = 10 === 10
+// console.log(t5)
+//
+// let t6 = 10 == 10
+// console.log(t6)
+//
+// let t7 = 10 > 10
+// console.log(t7)
+//
+// let t8 = 10 < 10
+// console.log(t8)
+//
+// let t9 = 10 !== 10
+// console.log(t9)
+//
+// let t10 = 123 === '123'
+// console.log(t10)
+//
+// let t11 = 123 !== '123'
+// console.log(t11)
 
 // Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 //     let str = "20";
