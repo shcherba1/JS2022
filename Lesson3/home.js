@@ -93,23 +93,59 @@
 
 // 5.Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
 // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
-// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 
-// let menu = [];
-// menu[0] = 3;
-// menu[1] = 5;
-// menu[2] = 7;
-// menu[3] = 0;
-// menu[4] = true;
-// menu[5] = false;
-// menu[6] = 'a';
-// menu[7] = 'b';
-// menu[8] = 'c';
-// menu[9] = 'd';
-//
+let menu = [];
+menu[0] = 3;
+menu[1] = 5;
+menu[2] = 7;
+menu[3] = 0;
+menu[4] = true;
+menu[5] = false;
+menu[6] = 'a';
+menu[7] = 'b';
+menu[8] = 'c';
+menu[9] = 'd';
+
 // for (i = 0; i < 10; i++) {
 //     console.log(menu[i]);
+// }
+
+// for (i = 0; i < 10; i++) {
+//     console.log(i, menu[i]);
+//     document.write(i);
+// }
+//
+/
+//
+
+// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+//
+// for (i = 0; i < 100; i++) {
+//     console.log(i, menu[i]);
+//        document.write(i);
+// }
+
+// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+
+// for (i = 0; i < 100; i=i+2) {
+//     console.log(i, menu[i]);
+//     document.write(i);
+// }
+
+// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+// for (i = 0; i < 100; i++) {
+//    if (i % 2 === 0) {
+//        console.log (i);
+//        document.write(i);
+//    }
+// }
+
+// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+// for (i = 0; i < 100; i++) {
+//    if (i % 2 !== 0) {
+//        console.log (i);
+//        document.write(i);
+//    }
 // }
