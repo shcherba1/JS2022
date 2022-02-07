@@ -1,7 +1,7 @@
 // 1. зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
 //     - перебрати його циклом while
 
-let menu = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+// let menu = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 
 // let i = 0;
 // while (i < 10) {
@@ -94,3 +94,15 @@ let menu = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 //     if (i%2 === 0)
 //     console.log(menu[i]);
 // }
+
+// HTML файл
+// Використовуючи данні з масиву, за допомоги document.write та циклу
+// побудувати структуру по шаблону template1.1
+
+// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+//
+// document.write(`<ul>`);
+// for (i = 0; i < listOfItems.length; i++) {
+//        document.write(`<li>${listOfItems[i]}</li>`);
+// }
+// document.write(`/<ul>`);
