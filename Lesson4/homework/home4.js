@@ -34,15 +34,63 @@
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
 // function foo(t) {
-//   return <p>t</p>;
+//   document.write(`<p>${t}</p>`)
 // }
-// document.write(foo(`okten`));
-
+// foo(`okten`);
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
+// function foo(t) {
+//   document.write(`<ul>`);
+//     document.write(`<li>${t}</li>`);
+//     document.write(`<li>${t}</li>`);
+//     document.write(`<li>${t}</li>`);
+//     document.write(`</ul>`)
+// }
+// foo(`okten`);
 
 
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+// Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+// function foo(text, num) {
+//     document.write(`<ul>`);
+//     for (let i = 1; i <= num; i++) {
+//         document.write(`<li>${text}</li>`);
+//     }
+//     document.write(`</ul>`);
+// }
+// foo(`test`, 5);
+
+
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+// let mas = [1, 2, 'a', true];
+//
+// function masuv(arr) {
+//     document.write(`<ul>`);
+//     for (const item of arr) {
+//         document.write(`<li>${item}</li>`);
+//     }
+//     document.write(`</ul>`);
+// }
+// masuv(mas);
+
+
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+// let mas = [
+//     {id: 1, name: 'Ivan', age: 15},
+//     {id: 2, name: 'Oleg', age: 17},
+// ];
+//
+// function masuv(arr) {
+//     for (const item of arr) {
+//         document.write(`<div>${item.id} ${item.name} ${item.age}</div>`);
+//     }
+// }
+//
+// masuv(mas);
+
+
+
