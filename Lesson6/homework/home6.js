@@ -65,8 +65,7 @@
 
 // let str = "HTML JavaScript PHP";
 // let insert_dash = (str) => {
-//     let x = str.split(' ').str.join('-').str.toUpperCase();
-//     return x;
+//    return str.split(' ').join('-').toUpperCase();
 // }
 // document.write(insert_dash(str));
 
