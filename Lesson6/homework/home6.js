@@ -83,7 +83,7 @@
 //
 // let str = 'lorem ipsum';
 // let capitalize = (str) => {
-//     return str.split(' ').map();
+//     return str.split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
 // //
 // }
 // document.write(capitalize(str));
