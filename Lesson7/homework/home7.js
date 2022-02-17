@@ -41,35 +41,34 @@
 
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 
-class Client {
-    constructor(id, name, surname, email, phone, order) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.phone = phone;
-        this.order = order;
-    }
-}
+// class Client {
+//     constructor(id, name, surname, email, phone, order) {
+//         this.id = id;
+//         this.name = name;
+//         this.surname = surname;
+//         this.email = email;
+//         this.phone = phone;
+//         this.order = order;
+//     }
+// }
 
 // створити пустий масив, наповнити його 10 об'єктами Client
 
-let client1 = [
-    new Client(1, 'olya', 'aa', 'aaaa', 30578545, ['bla', 'bla']),
-    new Client(2, 'ivan', 'bb', 'bbbb', 30789642, ['bla', 'bla', 'bla']),
-    new Client(3, 'oleg', 'cc', 'cccc', 32794562, ['bla', 'bla']),
-    new Client(4, 'vasya', 'dd','dddd', 32794562, ['bla', 'bla', 'bla']),
-    new Client(5, 'olya', 'ee', 'eeee', 32794562, ['bla', 'bla', 'bla']),
-    new Client(6, 'vika', 'ff', 'ffff', 37955424, ['bla', 'bla', 'bla', 'bla']),
-    new Client(7, 'pavlo', 'gg', 'gggg', 3789456, ['bla', 'bla', 'bla']),
-    new Client(8, 'yana', 'hh', 'hhhh', 7556222, ['bla']),
-    new Client(9, 'natali', 'kk', 'kkkk', 78945352, ['bla', 'bla', 'bla']),
-    new Client(10, 'ira', 'jj', 'jjjj', 4567892, ['bla', 'bla', 'bla'])
-]
+// let client1 = [
+//     new Client(1, 'olya', 'aa', 'aaaa', 30578545, ['bla', 'bla']),
+//     new Client(2, 'ivan', 'bb', 'bbbb', 30789642, ['bla', 'bla', 'bla']),
+//     new Client(3, 'oleg', 'cc', 'cccc', 32794562, ['bla', 'bla']),
+//     new Client(4, 'vasya', 'dd','dddd', 32794562, ['bla', 'bla', 'bla']),
+//     new Client(5, 'olya', 'ee', 'eeee', 32794562, ['bla', 'bla', 'bla']),
+//     new Client(6, 'vika', 'ff', 'ffff', 37955424, ['bla', 'bla', 'bla', 'bla']),
+//     new Client(7, 'pavlo', 'gg', 'gggg', 3789456, ['bla', 'bla', 'bla']),
+//     new Client(8, 'yana', 'hh', 'hhhh', 7556222, ['bla']),
+//     new Client(9, 'natali', 'kk', 'kkkk', 78945352, ['bla', 'bla', 'bla']),
+//     new Client(10, 'ira', 'jj', 'jjjj', 4567892, ['bla', 'bla', 'bla'])
+// ]
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
-// let tt = user1.sort((a, b) => {
-//     user1.sort((a,b) => b.id - a.id);
-// })
+// let tt = client1.sort((a, b) => b.order.length - a.order.length)
+//
 // console.log(tt);
