@@ -91,28 +91,42 @@
 // console.log(car1);
 
 // 3. Cтворити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-
-function Popel (name, age, size) {
-    this.name = name;
-    this.age = age;
-    this.size = size;
-}
-let popel1 = [
-    new Popel('olya', 25, 38),
-    new Popel('ira', 42,40),
-    new Popel('katya',32,39)
-]
-
-// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-
-class Prince {
-    constructor(name, age, shose) {
-        this.name = name;
-        this.age = age;
-        this.shose = shose;
-    }
-}
-let prince1 = Prince('Anton', 30, 38);
+//
+// function Popel (name, age, size) {
+//     this.name = name;
+//     this.age = age;
+//     this.size = size;
+// }
+//
+// let popel1 = [
+//     new Popel('olya', 25, 38),
+//     new Popel('ira', 42,40),
+//     new Popel('katya',32,39)
+// ]
+//
+// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+//
+// class Prince {
+//     constructor(name, age, shose) {
+//         this.name = name;
+//         this.age = age;
+//         this.shose = shose;
+//     }
+// }
+// let prince1 = new Prince('Anton', 30, 38);
 
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+
+// let they = (x, y) => {
+//     for (const item of popel1) {
+//         if (prince1.shose === item.size)
+//             return `${item.name}`;
+//     }
+// }
+// console.log(they(popel1, prince1));
+
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// let popelushka = popel1.find(item => (item.size === prince1.shose));
+// console.log(popelushka);
+
+
