@@ -68,14 +68,26 @@
 // ]
 // }
 
+
+
 class Qwerty {
-    constructor(tegname, opys, atrname, artopys) {
+    constructor(tegname, opys, atr) {
         this.tegname = tegname;
         this.opys = opys;
-        this.atr = {atrname: atrname, artopys: artopys};
+        this.atr = atr;
     }
 }
 
-    let Qwerty1 = new Qwerty('p', 'Определяет текстовый абзац.', 'align', 'Определяет выравнивание текста.');
+class Atr {
+    constructor(atrname, atropys) {
+        this.atrb =  [
+            {atrname: atrname, atropys: atropys},
+            {atrname: atrname, atropys: atropys},
 
-console.log(Qwerty1)
+        ]
+    }
+}
+
+    let Qwerty1 = new Qwerty('a', 'предназначен для создания ссылок', new Atr('href', 'Задает адрес документа, на который следует перейти', 'download', 'Предлагает скачать указанный по ссылке файл.'));
+
+console.log(Qwerty1);
