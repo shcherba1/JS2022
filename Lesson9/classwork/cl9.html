@@ -53,13 +53,23 @@
     },
   ];
 
-let x = document.getElementsByTagName('div');
-  for (const item of simpsons) {
-    let div = document.createElement('div');
-    div.classList.add('member');
-    div.innerText = `${item.name} ${item.surname} ${item.age} ${item.info} ${item.photo}`;
-    x[0].append(div);
-  }
+// let x = document.getElementsByTagName('div');
+//   for (const item of simpsons) {
+//     let div = document.createElement('div');
+//     div.classList.add('member');
+//     div.innerText = `${item.name} ${item.surname} ${item.age} ${item.info} ${item.photo}`;
+//     x[0].append(div);
+//   }
+
+// 2.взяти попередній масив з сімпсонами.
+//       Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
+//   Для кожної властивості елементу створити окремий блок, та помістити його у div.member
+
+  let qq = document.getElementsByTagName('div');
+    for (const item of simpsons) {
+      let div1 = document.createElement('div');
+      div1.classList.add('member');
+      let divname = document.createElement('div');
 
 
 
