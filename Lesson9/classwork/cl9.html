@@ -65,16 +65,121 @@
 //       Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
 //   Для кожної властивості елементу створити окремий блок, та помістити його у div.member
 
-  let qq = document.getElementsByTagName('div');
-    for (const item of simpsons) {
-      let div1 = document.createElement('div');
-      div1.classList.add('member');
-      let divname = document.createElement('div');
+  // let qq = document.getElementsByTagName('div');
+  //   for (const item of simpsons) {
+  //       let div1 = document.createElement('div');
+  //       div1.classList.add('member');
+  //
+  //       let divname = document.createElement('div');
+  //       divname.innerText = `${item.name}`;
+  //       let divsurname = document.createElement('div');
+  //       divsurname.innerText = `${item.surname}`;
+  //       let divage = document.createElement('div');
+  //       divage.innerText = `${item.age}`;
+  //       let divinfo = document.createElement('div');
+  //       divinfo.innerText = `${item.info}`;
+  //       let divimg = document.createElement('img');
+  //       divimg.src = `${item.photo}`;
+  //
+  //       div1.append(divname, divsurname, divage, divinfo, divimg);
+  //       qq[0].append(div1);
+  //   }
 
 
+  // 3. Є масив. Створити для кожного елементу масиву свій блок, блок розділити блоками,
+  // в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 
+  let coursesArray = [
+      {
+          title: 'JavaScript Complex',
+          monthDuration: 5,
+          hourDuration: 909,
+          modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+      },
+      {
+          title: 'Java Complex',
+          monthDuration: 6,
+          hourDuration: 909,
+          modules: ['html',
+              'css',
+              'js',
+              'mysql',
+              'mongodb',
+              'angular',
+              'aws',
+              'docker',
+              'git',
+              'java core',
+              'java advanced']
+      },
+      {
+          title: 'Python Complex',
+          monthDuration: 6,
+          hourDuration: 909,
+          modules: ['html',
+              'css',
+              'js',
+              'mysql',
+              'mongodb',
+              'angular',
+              'aws',
+              'docker',
+              'python core',
+              'python advanced']
+      },
+      {
+          title: 'QA Complex',
+          monthDuration: 4,
+          hourDuration: 909,
+          modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+      },
+      {
+          title: 'FullStack',
+          monthDuration: 7,
+          hourDuration: 909,
+          modules: ['html',
+              'css',
+              'js',
+              'mysql',
+              'mongodb',
+              'react',
+              'angular',
+              'aws',
+              'docker',
+              'git',
+              'node.js',
+              'python',
+              'java']
+      },
+      {
+          title: 'Frontend',
+          monthDuration: 4,
+          hourDuration: 909,
+          modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+      }
+  ];
 
+  for (const item of coursesArray) {
 
+      let course = document.createElement('div');
+      let divtitle = document.createElement('h1');
+      divtitle.innerText = `${item.title}`;
+
+      let divmonthDuration = document.createElement('div');
+      divmonthDuration.innerText = `${item.monthDuration}`;
+      let divhourDuration = document.createElement('div');
+      divhourDuration.innerText = `${item.hourDuration}`;
+
+      let divmodules = document.createElement('ul');
+
+      for (valye in item.modules) {
+          let li = document.createElement('li');
+          li.innerText = item.modules[valye];
+          divmodules.append(li);
+      }
+course.append(divtitle, divmonthDuration, divhourDuration, divmodules);
+document.body.append(course);
+  }
 
 
 
