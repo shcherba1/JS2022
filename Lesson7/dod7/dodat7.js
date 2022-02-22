@@ -74,7 +74,7 @@ class Qwerty {
     constructor(tegname, opys, atr) {
         this.tegname = tegname;
         this.opys = opys;
-        this.atr = atr;
+        this.atr = [];
     }
 }
 
