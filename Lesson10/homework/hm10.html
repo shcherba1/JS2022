@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!--<div id="text">text</div>-->
+<!--<button id="button">click</button>-->
+
+
+<!--<input type="text" id="age">-->
+<!--<input type="button" id="button2" value="send age">-->
+
+
+<!--<div class="menu">-->
+<!--    <h1 class="title">menulist</h1>-->
+<!--    <ul>-->
+<!--        <li>text1</li>-->
+<!--        <li>text2</li>-->
+<!--        <li>text3</li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+
+<script>
+<!--    -->
+<!--    -->
+//<!-- - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".-->
+
+// let elem = document.getElementById('text');
+// let button1 = document.getElementById('button');
+// button1.onclick = function () {
+//     elem.style.display = 'none';
+// }
+
+//<!-- - Создайте кнопку, при клике на которую, она будет скрывать сама себя.-->
+
+// let elem = document.getElementById('text');
+// let button1 = document.getElementById('button');
+// button1.onclick = function () {
+//     button1.style.display = 'none';
+// }
+
+
+//<!-- - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+// При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача-->
+
+//
+// let button2 = document.getElementById('button2');
+// button2.onclick = function () {
+//     let age1 = document.getElementById('age').value;
+//     if (age1 < 18) {
+//                 alert('Не дозволено');
+//             } else {
+//                 alert('Дозволено');
+//             }
+// }
+
+
+//<!-- - Создайте меню, которое раскрывается/сворачивается при клике-->
+
+// let menu1 = document.getElementsByClassName('menu');
+// let title1 = document.getElementsByClassName('title');
+//
+// title1.onclick = function () {
+//     menu1.classList.add('hidden');
+//
+// };
+
+
+//<!-- - Создать список комментариев, пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.-->
+//<!--Вывести список комментариев в документ, каждый в своем блоке.-->
+//<!--Добавьте каждому комментарию по кнопке для сворачивания его body.-->
+
+let comments = [
+    {title: 'Lorem1', body: 'lorem ipsum'},
+    {title: 'Lorem2', body: 'lorem ipsum dolo sit ameti'},
+];
+
+let divdoc = document.createElement('div');
+
+for (const item of comments) {
+    let div1 = document.createElement('div');
+    let h1 = document.createElement('h1');
+    let p1 = document.createElement('p');
+    let btn1 = document.createElement('button');
+    h1.innerText = item.title;
+    p1.innerText = item.body;
+    btn1.innerText = 'close';
+
+    btn1.onclick = function () {
+        p1.classList.add('hidden');
+    }
+    div1.append(h1, p1, btn1);
+    divdoc.append(div1);
+}
+document.body.append(divdoc)
+
+
+
+
+</script>
+
+</body>
+</html>

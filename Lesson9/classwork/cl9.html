@@ -165,10 +165,12 @@
       let divtitle = document.createElement('h1');
       divtitle.innerText = `${item.title}`;
 
+
       let divmonthDuration = document.createElement('div');
       divmonthDuration.innerText = `${item.monthDuration}`;
       let divhourDuration = document.createElement('div');
       divhourDuration.innerText = `${item.hourDuration}`;
+
 
       let divmodules = document.createElement('ul');
 
@@ -177,6 +179,7 @@
           li.innerText = item.modules[valye];
           divmodules.append(li);
       }
+
 course.append(divtitle, divmonthDuration, divhourDuration, divmodules);
 document.body.append(course);
   }

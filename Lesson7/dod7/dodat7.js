@@ -71,23 +71,20 @@
 
 
 class Qwerty {
-    constructor(tegname, opys, atr) {
+    constructor(tegname, opys) {
         this.tegname = tegname;
         this.opys = opys;
-        this.atr = [];
     }
 }
+
 
 class Atr {
     constructor(atrname, atropys) {
-        this.atrb =  [
-            {atrname: atrname, atropys: atropys},
-            {atrname: atrname, atropys: atropys},
-
-        ]
+        this.atrb = {atrname: atrname, atropys: atropys};
     }
 }
 
-    let Qwerty1 = new Qwerty('a', 'предназначен для создания ссылок', new Atr('href', 'Задает адрес документа, на который следует перейти', 'download', 'Предлагает скачать указанный по ссылке файл.'));
+
+    let Qwerty1 = new Qwerty('a', 'предназначен для создания ссылок', new Atr('href', 'Задает адрес документа, на который следует перейти'));
 
 console.log(Qwerty1);
