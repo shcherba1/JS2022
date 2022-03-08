@@ -6,6 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+
+    <style>
+
+        .menu.hidden ul {
+            display: none;
+        }
+
+        .p1hidden {
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -64,43 +77,43 @@
 
 
 //<!-- - Создайте меню, которое раскрывается/сворачивается при клике-->
-
-// let menu1 = document.getElementsByClassName('menu');
-// let title1 = document.getElementsByClassName('title');
+//
+// let menu1 = document.querySelector('.menu');
+// let title1 = menu1.querySelector('.title');
 //
 // title1.onclick = function () {
-//     menu1.classList.add('hidden');
-//
+//     menu1.classList.toggle('hidden');
 // };
+
 
 
 //<!-- - Создать список комментариев, пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.-->
 //<!--Вывести список комментариев в документ, каждый в своем блоке.-->
 //<!--Добавьте каждому комментарию по кнопке для сворачивания его body.-->
-
-let comments = [
-    {title: 'Lorem1', body: 'lorem ipsum'},
-    {title: 'Lorem2', body: 'lorem ipsum dolo sit ameti'},
-];
-
-let divdoc = document.createElement('div');
-
-for (const item of comments) {
-    let div1 = document.createElement('div');
-    let h1 = document.createElement('h1');
-    let p1 = document.createElement('p');
-    let btn1 = document.createElement('button');
-    h1.innerText = item.title;
-    p1.innerText = item.body;
-    btn1.innerText = 'close';
-
-    btn1.onclick = function () {
-        p1.classList.add('hidden');
-    }
-    div1.append(h1, p1, btn1);
-    divdoc.append(div1);
-}
-document.body.append(divdoc)
+//
+// let comments = [
+//     {title: 'Lorem1', body: 'lorem ipsum'},
+//     {title: 'Lorem2', body: 'lorem ipsum dolo sit ameti'},
+// ];
+//
+// let divdoc = document.createElement('div');
+//
+// for (const item of comments) {
+//     let div1 = document.createElement('div');
+//     let h1 = document.createElement('h1');
+//     let p1 = document.createElement('p');
+//     let btn1 = document.createElement('button');
+//     h1.innerText = item.title;
+//     p1.innerText = item.body;
+//     btn1.innerText = 'close';
+//
+//     btn1.onclick = function () {
+//         p1.classList.add('p1hidden');
+//     }
+//     div1.append(h1, p1, btn1);
+//     divdoc.append(div1);
+// }
+// document.body.append(divdoc)
 
 
 
