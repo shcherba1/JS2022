@@ -9,15 +9,79 @@
 </head>
 <body>
 
+<!--<form name="myform">-->
+<!--    <label>your name-->
+<!--        <input name="name" type="text"/>-->
+<!--    </label>-->
+<!--    <label>your age-->
+<!--        <input name="age" type="number"/>-->
+<!--    </label>-->
+
+<!--    <button id="btn">send</button>-->
+<!--</form>-->
+
+
+<form name="cars">
+    <label>model
+        <input name="model" type="text"/>
+    </label>
+    <label>type
+        <input name="type" type="text"/>
+    </label>
+    <label>volume
+        <input name="volume" type="number"/>
+    </label>
+
+    <button id="btn">send</button>
+</form>
+
+
 <script>
 
+//1. створити форму з інпутами для name та age.
+//При відправці форми записати об'єкт в localstorage
 
--створити форму з інпутами для name та age.
-При відправці форми записати об'єкт в localstorage
+// let name = document.forms[0].name;
+// let age = document.forms[0].age;
+// let btn = document.getElementById('btn');
 
--створити форму з інпутами для model,type та volume автівки.
-при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+// let key = 'key';
+// let sending = (yourname, yourage) => {
+//     let user = {
+//         name: yourname,
+//         age: yourage
+//     };
+//     localStorage.setItem(key, JSON.stringify(user));
+// };
+// btn.onclick = () => {
+//     sending(name.value, age.value);
+// }
 
+//2. створити форму з інпутами для model,type та volume автівки.
+//при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+
+let model = document.forms[0].model;
+let type = document.forms[0].type;
+let volume = document.forms[0].volume;
+let btn = document.getElementById('btn');
+let key = 'key';
+
+let sending = (carmodel, cartype, carvolume) => {
+    let avto = localStorage.getItem('avto');
+    if (!avto) {
+        let avto = [];
+        avto.push({carmodel, cartype, carvolume});
+        localStorage.setItem(key, JSON.stringify(avto));
+    } else {
+        let avto2 = JSON.parse(avto);
+        avto2.push({carmodel, cartype, carvolume});
+        localStorage.setItem(key, JSON.stringify(avto2));
+    }
+};
+
+btn.onclick = () => {
+    sending(model.value, type.value, volume.value);
+}
 
 </script>
 
