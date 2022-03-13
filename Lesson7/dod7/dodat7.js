@@ -37,7 +37,7 @@
 // console.log(some1);
 
 
-// -  Створити функцію конструктор / клас  який описує об'єкт тегу
+// 2.  Створити функцію конструктор / клас  який описує об'єкт тегу
 // Поля :
 //     -назва тегу ()
 // - опис його дій
@@ -68,23 +68,17 @@
 // ]
 // }
 
-
-
 class Qwerty {
-    constructor(tegname, opys) {
+    constructor(tegname, tegaction, atrname, atraction) {
         this.tegname = tegname;
-        this.opys = opys;
+        this.tegaction = tegaction;
+        this.opys = [];
+        const obj = {atrname, atraction};
+        this.opys.push(obj);
     }
 }
 
-
-class Atr {
-    constructor(atrname, atropys) {
-        this.atrb = {atrname: atrname, atropys: atropys};
-    }
-}
-
-
-    let Qwerty1 = new Qwerty('a', 'предназначен для создания ссылок', new Atr('href', 'Задает адрес документа, на который следует перейти'));
+let Qwerty1 = new Qwerty ('a', 'предназначен для создания ссылок', 'href', 'Задает адрес документа, на который следует перейти');
 
 console.log(Qwerty1);
+

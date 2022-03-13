@@ -44,22 +44,22 @@
 // <!--https://jsonplaceholder.typicode.com/comments-->
 
 //
-// fetch('https://jsonplaceholder.typicode.com/comments')
-//     .then(response => response.json())
-//     .then(comments => {
-//         let comentblok = document.createElement('div');
-//         comentblok.classList.add('wrap');
-//         for (const item of comments) {
-//             let divblok = document.createElement('div');
-//             divblok.classList.add('comment');
-//             divblok.innerHTML = `<h2>id: ${item.id}</h2>
-//                         <h3>name: ${item.name}</h3>
-//                         <p>email: ${item.email}</p>
-//                         <p>body: ${item.body}</p>`;
-//             comentblok.append(divblok);
-//             document.body.appendChild(comentblok);
-//         }
-//     })
+fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(response => response.json())
+    .then(comments => {
+        let comentblok = document.createElement('div');
+        comentblok.classList.add('wrap');
+        for (const item of comments) {
+            let divblok = document.createElement('div');
+            divblok.classList.add('comment');
+            divblok.innerHTML = `<h2>id: ${item.id}</h2>
+                        <h3>name: ${item.name}</h3>
+                        <p>email: ${item.email}</p>
+                        <p>body: ${item.body}</p>`;
+            comentblok.append(divblok);
+            document.body.appendChild(comentblok);
+        }
+    })
 
 
 </script>
