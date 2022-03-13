@@ -31,19 +31,19 @@ for (const item of posts) {
 let button = document.createElement('button');
 button.innerText = 'click';
 button.onclick = (id) => {
-       fetch('https://jsonplaceholder.typicode.com/posts/' + post.id + '/comments')
+       fetch('https://jsonplaceholder.typicode.com/posts/' + item.id + '/comments')
          .then(response => response.json())
          .then(comments => {
 for (const value of comments) {
-   if (post.id === value.postId) {
-   let divcomments = document.createElement('div');
-   divcomments.classList.add('comment');
-   divcomments.innerHTML = `<h2>id: ${value.id}</h2>
+   if (item.id === value.postId) {
+       let divcomments = document.createElement('div');
+       divcomments.classList.add('comment');
+       divcomments.innerHTML = `<h2>id: ${value.id}</h2>
                             <h3>name: ${value.name}</h3>
                             <p>email: ${value.email}</p>
                             <p>body: ${value.body}</p>`;
-   divblok.append(divcomments);
-}
+       divblok.append(divcomments);
+   }
 }
 })
 }
