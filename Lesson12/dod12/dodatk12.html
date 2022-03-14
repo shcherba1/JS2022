@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="dod12.css">
+</head>
+<body>
+
+<script>
+
+    // Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
+    // https://jsonplaceholder.typicode.com/users
+    //     кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.
+    //     Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => {
+            let usersblok = document.createElement('div');
+            for (const item of users) {
+                let divusersblok = document.createElement('div');
+                divusersblok.classList.add('wrap');
+                divusersblok.innerHTML = `<h2>id: ${item.id}</h2>
+                             <h3>name: ${item.name}</h3>
+                             <h3>username: ${item.username}</h3>`;
+
+                let button1 = document.createElement('button');
+                button1.innerText = 'click';
+                button1.onclick = (id) => {
+                    fetch('https://jsonplaceholder.typicode.com/users/' + item.id + '/posts')
+                        .then(response => response.json())
+                        .then(posts => {
+                            for (const value of posts) {
+                                if (item.id === value.userId) {
+                                    let divpostblok = document.createElement('div');
+                                    divpostblok.classList.add('post');
+                                    divpostblok.innerHTML = `<h2>id: ${value.id}</h2>
+                             <h3>Title: ${value.title}</h3>
+                             <p>Body: ${value.body}</p>`;
+
+                                    let button2 = document.createElement('button');
+                                    button2.innerText = 'click';
+                                    button2.onclick = (id) => {
+                                        fetch('https://jsonplaceholder.typicode.com/posts/' + value.userId + '/comments')
+                                            .then(response => response.json())
+                                            .then(comments => {
+                                                    for (const x of comments) {
+                                                        if (value.userId === x.postId) {
+                                                            let divcomments = document.createElement('div');
+                                                            divcomments.classList.add('comment');
+                                                            divcomments.innerHTML = `<h2>id: ${x.id}</h2>
+                                                                                     <h3>name: ${x.name}</h3>
+                                                                                     <p>email: ${x.email}</p>
+                                                                                     <p>body: ${x.body}</p>`;
+                                                            divpostblok.append(divcomments);
+                                                        }
+
+                                                    }
+                                                }
+                                            )
+
+                                    }
+                                    divpostblok.append(button2);
+                                    divusersblok.append(divpostblok);
+
+                                }
+                            }
+                            }
+                        )
+            }
+                divusersblok.append(button1);
+                usersblok.append(divusersblok);
+
+            }
+            }
+        )
+
+
+
+
+</script>
+</body>
+</html>
