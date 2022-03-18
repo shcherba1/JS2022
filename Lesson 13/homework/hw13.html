@@ -42,7 +42,7 @@
     //     }, 1000)
 
 
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve) => {
         let counter = 1;
         setTimeout(() => {
                 console.log(counter, 'прокинутись');
@@ -52,7 +52,7 @@
     })
 
 promise.then((counter) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             console.log(counter, 'вмитись');
             counter++;
@@ -62,7 +62,7 @@ promise.then((counter) => {
     })
 
     .then((counter) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             console.log(counter, 'поснідати');
             counter++;
@@ -72,7 +72,7 @@ promise.then((counter) => {
 })
 
     .then((counter) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 console.log(counter, 'go на роботу');
                 counter++;
@@ -82,7 +82,7 @@ promise.then((counter) => {
     })
 
     .then((counter) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 console.log(counter, 'прийти з роботи');
                 counter++;
@@ -92,7 +92,7 @@ promise.then((counter) => {
     })
 
     .then((counter) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 console.log(counter, 'навчання');
                 counter++;
@@ -102,7 +102,7 @@ promise.then((counter) => {
     })
 
     .then((counter) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             setTimeout(() => {
                 console.log(counter, 'спати');
                 counter++;
