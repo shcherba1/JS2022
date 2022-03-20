@@ -15,3 +15,43 @@
     margin-right: calc(25% - 100px);
 }
 
+.details {
+    background: aquamarine;
+}
+
+.btn {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.post {
+    background: aqua;
+    margin: 5px;
+    width: 100px;
+    margin-left: calc(10% - 50px);
+    margin-right: calc(10% - 50px);
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.postdet {
+background: azure;
+}
+
+.comments {
+    background: chocolate;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comments > li {
+    width: 100px;
+    margin: 15px;
+    background: bisque;
+}
