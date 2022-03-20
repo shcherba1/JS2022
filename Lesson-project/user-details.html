@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+.details {
+    background: aquamarine;
+}
+
+.post {
+    background: aqua;
+}
+
+
+    </style>
+</head>
+<body>
+<h1>User details</h1>
+
+<div class="details"></div>
+<div class="posts"></div>
+
+<script>
+
+let url = new URL(location.href);
+let user = JSON.parse(url.searchParams.get('data'));
+let userDetailsBlock = document.getElementsByClassName('details')[0];
+userDetailsBlock.innerText = `${JSON.stringify(user.id)} ${JSON.stringify(user.name)} ${JSON.stringify(user.username)} ${JSON.stringify(user.email)} ${JSON.stringify(user.address)} ${JSON.stringify(user.phone)} ${JSON.stringify(user.website)} ${JSON.stringify(user.company)}`;
+
+let postbutton = document.createElement("button");
+postbutton.innerText = 'post of current user';
+let postsBlock = document.getElementsByClassName('posts')[0];
+postbutton.onclick = function () {
+    fetch('https://jsonplaceholder.typicode.com/users/${user.id}/posts')
+        .then(value => value.json())
+        .then(value => {
+            for (const postitem of value) {
+                let postBlock = document.createElement('div');
+                postBlock.classList.add('post');
+                postBlock.innerText = postitem.title;
+                postsBlock.appendChild(postBlock);
+            }
+
+        }
+        )
+}
+    userDetailsBlock.append(postbutton);
+
+
+
+</script>
+
+</body>
+</html>

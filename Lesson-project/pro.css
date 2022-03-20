@@ -1,0 +1,17 @@
+.user {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap {
+    background: beige;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: calc(25% - 100px);
+    margin-right: calc(25% - 100px);
+}
+
